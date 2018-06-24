@@ -10,7 +10,7 @@ def isUnique(input_str):
 				return False
 	return True
 
-# Naive approach: time O()
+# Set approach: time O(n)
 def isUnique_hash(input_str):
 	if len(input_str) > Alphabet_size:
 		return False
@@ -20,6 +20,11 @@ def isUnique_hash(input_str):
 			return False
 		char_seen.add(i)
 	return True
+
+
+# Sorting approach: time O(n log n)
+def isUnique_sort(input_str):
+
 
 test = "azerty"
 print isUnique(test)
