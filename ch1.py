@@ -53,7 +53,7 @@ def isUnique_list(input_str):
 
 #1.2
 
-#Sort: time O(nlogn)
+# Sort: time O(nlogn)
 def isPerm_sort(strA, strB):
 	if len(strA) != len(strB):
 		return False
@@ -64,6 +64,7 @@ def isPerm_sort(strA, strB):
 			return False
 	return True
 
+# dict: time O(n)
 def isPerm_dict(strA, strB):
 	if len(strA) != len(strB):
 		return False
@@ -75,6 +76,8 @@ def isPerm_dict(strA, strB):
 		dictB[b] += 1
 	return dictA==dictB
 
+
+# list approach: time O(n)
 def isPerm_list(strA, strB):
 	if len(strA) != len(strB):
 		return False
@@ -89,8 +92,55 @@ def isPerm_list(strA, strB):
 			return False
 	return True
 
-test1a = "abb"
-test1b = "bab"
-test1c = "aab"
-print isPerm_list(test1a,test1b)
-print isPerm_list(test1a,test1c)
+
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+
+#1.3
+# build new string from old, time: O(n)
+def rep_space(string, length):
+	if (" ") not in string:
+		return string
+	cnum = 0
+	new_str = ""
+	for c in string:
+		if c == " ":
+			new_str += "%20"
+		else:
+			new_str += c
+		cnum += 1
+		if cnum == length:
+			return new_str
+
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+#-------------------------------------------------------------------------
+
+#1.4 hash approach; time: O(n)
+def palindrome_perm(string):
+	string = string.lower()
+	dictPal = dict(zip(set(string),[0]*len(string)))
+	for c in string:
+		if c != " ":
+			dictPal[c] += 1
+	oddval = 0
+	for c in string:
+		if c != " ":
+			if (dictPal[c] % 2) == 1:
+				oddval += 1
+				if oddval > 1:
+					return False
+	return True
+
+
+test1 = "aab"
+test2 = "jocelynlecoj"
+test3 = "Tact Coa"
+print palindrome_perm(test1)
+print palindrome_perm(test2)
+print palindrome_perm(test3)
