@@ -10,7 +10,7 @@ def print_list(node):
 		print node.val
 		node = node.next
 
-#2.1
+#2.1 Time: O(n)
 def remove_dup(node):
 	seenlist = set()
 	seenlist.add(node.val)
