@@ -1,4 +1,4 @@
-#Chapter 2: Linked lists
+# Chapter 2: Linked lists
 
 class Node:
     def __init__(self,val):

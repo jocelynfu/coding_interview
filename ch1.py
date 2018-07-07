@@ -1,6 +1,7 @@
 # CH 1 Arrays and Strings
 
 #1.1
+# good refence: https://codereview.stackexchange.com/questions/96630/determine-if-string-has-all-unique-characters
 Alphabet_size = 96
 # Naive approach: time O(n^2)
 def isUnique(input_str):
