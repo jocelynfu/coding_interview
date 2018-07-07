@@ -22,6 +22,12 @@ def remove_dup(node):
 			seenlist.add(node.next.val)
 		node = node.next
 
+		
+#2.2
+
+
+
+# Tests
 node1 = Node(1)
 node2 = Node(2)
 node3 = Node(3)
