@@ -64,7 +64,6 @@ def remove_mid_sol(node):
 
 
 
-
 # Tests
 node1 = Node(1)
 node2 = Node(2)
