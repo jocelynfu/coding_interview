@@ -11,4 +11,4 @@ def print_list(node):
 		print node.val
 		node = node.next
 
-
+#3.1
